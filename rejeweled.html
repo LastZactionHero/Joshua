@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>Rejeweled</title>
+
+		<script type="text/javascript" src="GEUtility.js"></script>
+		<script type="text/javascript" src="GEObject.js"></script>
+		<script type="text/javascript" src="GEPiece.js"></script>
+		<script type="text/javascript" src="GEPieceBox.js"></script>
+		<script type="text/javascript" src="GERegion.js"></script>
+		<script type="text/javascript" src="GEBoard.js"></script>
+		<script type="text/javascript" src="GERulebook.js"></script>
+		<script type="text/javascript" src="GEDialog.js"></script>
+		<script type="text/javascript" src="GESound.js"></script>
+		<script type="text/javascript" src="GEScoreboard.js"></script>
+		
+		<script type="text/javascript" src="RJBoard.js"></script>
+		<script type="text/javascript" src="RJRegion.js"></script>
+		<script type="text/javascript" src="RJPieceBox.js"></script>
+		<script type="text/javascript" src="RJPiece.js"></script>
+		<script type="text/javascript" src="RJSound.js"></script>
+		<script type="text/javascript" src="RJScoreboard.js"></script>
+				
+		<script type="text/javascript">
+			//
+			//  Global Variables
+			//
+			gBoard = null;
+			gPieceBox = null;
+			gRulebook = null;
+			gDialog = null;
+			gSound = null;
+			gScoreboard = null;
+			
+			// Startup Function
+			function startup()
+			{
+				gBoard = new RJBoard( "d_board" );
+				gPieceBox = new RJPieceBox( "d_piece_layer" );
+				gRulebook = new GERulebook();
+				gDialog = new GEDialog( "d_dialog" );
+				gSound = new RJSound( "d_sound" );
+				gScoreboard = new RJScoreboard( "d_scoreboard" );
+				
+				//gPieceBox = new RJPieceBox( "d_piece_layer" );
+				//gRulebook = new GERulebook();
+				//gDialog = new GEDialog( "d_dialog" );
+			
+				gBoard.draw();
+				gPieceBox.draw_pieces();
+				gPieceBox.init_pieces();
+				gScoreboard.draw_scoreboard();
+			}
+			
+			function handle_mouse()
+			{
+				alert("mousething" );
+			}
+			</script>
+	</head>
+	
+	<body background="img/static-red-pattern.gif" onload="javascript:startup()">
+		<div id="d_board" style="position:fixed;"></div>
+		<div 
+			id="d_piece_layer" 
+			style="position:fixed; top:0px; left:0px; width:1000px; height:1000px;" 
+			onMouseMove="javascript:gPieceBox.handle_mouse_move(event)"
+			onMouseDown="javascript:gPieceBox.handle_mouse_down(event)"
+			onMouseUp="javascript:gPieceBox.handle_mouse_up(event)"
+		>
+		</div>
+		<div id="d_scoreboard" style=position:absolute;"></div>
+		<div id="d_dialog" style="position:absolute;"></div>
+		<div id="d_sound" style="visibility:hidden;"></div>
+	</body>
+</html>

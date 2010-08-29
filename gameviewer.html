@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Game Engine</title>
+
+		<script type="text/javascript" src="GEUtility.js"></script>
+		<script type="text/javascript" src="GEObject.js"></script>
+		<script type="text/javascript" src="GEPiece.js"></script>
+		<script type="text/javascript" src="GEPieceBox.js"></script>
+		<script type="text/javascript" src="GERegion.js"></script>
+		<script type="text/javascript" src="GEBoard.js"></script>
+		<script type="text/javascript" src="GERulebook.js"></script>
+		
+		<script type="text/javascript">
+			//
+			//  Global Variables
+			//
+			gBoard = new GEBoard( "d_board" );
+			gPieceBox = new GEPieceBox( "d_piece_layer" );
+			gRulebook = new GERulebook();
+			
+			// Startup Function
+			function startup()
+			{
+				gBoard.draw();
+				gPieceBox.draw_pieces();
+			}
+			
+			function handle_mouse()
+			{
+				alert("mousething" );
+			}
+			</script>
+	</head>
+	
+	<body onload="javascript:startup()">
+		<div id="d_board" style="position:absolute;"></div>
+		<div 
+			id="d_piece_layer" 
+			style="position:absolute; top:0px; left:0px; width:1000px; height:1000px;" 
+			onMouseMove="javascript:gPieceBox.handle_mouse_move(event)"
+			onMouseDown="javascript:gPieceBox.handle_mouse_down(event)"
+			onMouseUp="javascript:gPieceBox.handle_mouse_up(event)"
+		>
+		</div>
+	</body>
+</html>
