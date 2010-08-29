@@ -2,23 +2,24 @@
 	<head>
 		<title>Rejeweled</title>
 
-		<script type="text/javascript" src="GEUtility.js"></script>
-		<script type="text/javascript" src="GEObject.js"></script>
-		<script type="text/javascript" src="GEPiece.js"></script>
-		<script type="text/javascript" src="GEPieceBox.js"></script>
-		<script type="text/javascript" src="GERegion.js"></script>
-		<script type="text/javascript" src="GEBoard.js"></script>
-		<script type="text/javascript" src="GERulebook.js"></script>
-		<script type="text/javascript" src="GEDialog.js"></script>
-		<script type="text/javascript" src="GESound.js"></script>
-		<script type="text/javascript" src="GEScoreboard.js"></script>
+		<script type="text/javascript" src="scripts/GE/GEUtility.js"></script>
+		<script type="text/javascript" src="scripts/GE/GEObject.js"></script>
+		<script type="text/javascript" src="scripts/GE/GEPiece.js"></script>
+		<script type="text/javascript" src="scripts/GE/GEPieceBox.js"></script>
+		<script type="text/javascript" src="scripts/GE/GERegion.js"></script>
+		<script type="text/javascript" src="scripts/GE/GEBoard.js"></script>
+		<script type="text/javascript" src="scripts/GE/GERulebook.js"></script>
+		<script type="text/javascript" src="scripts/GE/GEDialog.js"></script>
+		<script type="text/javascript" src="scripts/GE/GESound.js"></script>
+		<script type="text/javascript" src="scripts/GE/GEScoreboard.js"></script>
 		
-		<script type="text/javascript" src="RJBoard.js"></script>
-		<script type="text/javascript" src="RJRegion.js"></script>
-		<script type="text/javascript" src="RJPieceBox.js"></script>
-		<script type="text/javascript" src="RJPiece.js"></script>
-		<script type="text/javascript" src="RJSound.js"></script>
-		<script type="text/javascript" src="RJScoreboard.js"></script>
+		<script type="text/javascript" src="scripts/RJ/RJBoard.js"></script>
+		<script type="text/javascript" src="scripts/RJ/RJRegion.js"></script>
+		<script type="text/javascript" src="scripts/RJ/RJPieceBox.js"></script>
+		<script type="text/javascript" src="scripts/RJ/RJPiece.js"></script>
+		<script type="text/javascript" src="scripts/RJ/RJSound.js"></script>
+		<script type="text/javascript" src="scripts/RJ/RJScoreboard.js"></script>
+		<script type="text/javascript" src="scripts/RJ/RJRulebook.js"></script>
 				
 		<script type="text/javascript">
 			//
@@ -30,6 +31,7 @@
 			gDialog = null;
 			gSound = null;
 			gScoreboard = null;
+			gRulebook = null;
 			
 			// Startup Function
 			function startup()
@@ -40,12 +42,9 @@
 				gDialog = new GEDialog( "d_dialog" );
 				gSound = new RJSound( "d_sound" );
 				gScoreboard = new RJScoreboard( "d_scoreboard" );
-				
-				//gPieceBox = new RJPieceBox( "d_piece_layer" );
-				//gRulebook = new GERulebook();
-				//gDialog = new GEDialog( "d_dialog" );
+				gRulebook = new RJRulebook();
 			
-				gBoard.draw();
+				gBoard.draw_board();
 				gPieceBox.draw_pieces();
 				gPieceBox.init_pieces();
 				gScoreboard.draw_scoreboard();

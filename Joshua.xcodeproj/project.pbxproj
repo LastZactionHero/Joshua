@@ -1,0 +1,155 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXFileReference section */
+		5CDA0CF4122AD45000912763 /* gameengineobj.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = gameengineobj.js; sourceTree = "<group>"; };
+		5CDA0CF5122AD45000912763 /* gameviewer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = gameviewer.html; sourceTree = "<group>"; };
+		5CDA0D01122AD45000912763 /* rj-jewel-black.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "rj-jewel-black.gif"; sourceTree = "<group>"; };
+		5CDA0D02122AD45000912763 /* rj-jewel-blue.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "rj-jewel-blue.gif"; sourceTree = "<group>"; };
+		5CDA0D03122AD45000912763 /* rj-jewel-green.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "rj-jewel-green.gif"; sourceTree = "<group>"; };
+		5CDA0D04122AD45000912763 /* rj-jewel-purple.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "rj-jewel-purple.gif"; sourceTree = "<group>"; };
+		5CDA0D05122AD45000912763 /* rj-jewel-red.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "rj-jewel-red.gif"; sourceTree = "<group>"; };
+		5CDA0D06122AD45000912763 /* rj-jewel-teal.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "rj-jewel-teal.gif"; sourceTree = "<group>"; };
+		5CDA0D07122AD45000912763 /* rj-jewel-white.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "rj-jewel-white.gif"; sourceTree = "<group>"; };
+		5CDA0D08122AD45000912763 /* rj-jewel-yellow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "rj-jewel-yellow.gif"; sourceTree = "<group>"; };
+		5CDA0D09122AD45000912763 /* static-red-pattern.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "static-red-pattern.gif"; sourceTree = "<group>"; };
+		5CDA0D0A122AD45A00912763 /* rejeweled.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = rejeweled.html; sourceTree = "<group>"; };
+		5CDA0D19122AEFFB00912763 /* GEBoard.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GEBoard.js; sourceTree = "<group>"; };
+		5CDA0D1A122AEFFB00912763 /* GEDialog.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GEDialog.js; sourceTree = "<group>"; };
+		5CDA0D1B122AEFFB00912763 /* GEObject.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GEObject.js; sourceTree = "<group>"; };
+		5CDA0D1C122AEFFB00912763 /* GEPiece.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GEPiece.js; sourceTree = "<group>"; };
+		5CDA0D1D122AEFFB00912763 /* GEPieceBox.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GEPieceBox.js; sourceTree = "<group>"; };
+		5CDA0D1E122AEFFB00912763 /* GERegion.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GERegion.js; sourceTree = "<group>"; };
+		5CDA0D1F122AEFFB00912763 /* GERulebook.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GERulebook.js; sourceTree = "<group>"; };
+		5CDA0D20122AEFFB00912763 /* GEScoreboard.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GEScoreboard.js; sourceTree = "<group>"; };
+		5CDA0D21122AEFFB00912763 /* GESound.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GESound.js; sourceTree = "<group>"; };
+		5CDA0D22122AEFFB00912763 /* GEUtility.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GEUtility.js; sourceTree = "<group>"; };
+		5CDA0D24122AEFFB00912763 /* RJBoard.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = RJBoard.js; sourceTree = "<group>"; };
+		5CDA0D25122AEFFB00912763 /* RJPiece.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = RJPiece.js; sourceTree = "<group>"; };
+		5CDA0D26122AEFFB00912763 /* RJPieceBox.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = RJPieceBox.js; sourceTree = "<group>"; };
+		5CDA0D27122AEFFB00912763 /* RJRegion.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = RJRegion.js; sourceTree = "<group>"; };
+		5CDA0D28122AEFFB00912763 /* RJRulebook.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = RJRulebook.js; sourceTree = "<group>"; };
+		5CDA0D29122AEFFB00912763 /* RJScoreboard.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = RJScoreboard.js; sourceTree = "<group>"; };
+		5CDA0D2A122AEFFB00912763 /* RJSound.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = RJSound.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		5CCCD05F122AD419006C713A = {
+			isa = PBXGroup;
+			children = (
+				5CDA0D17122AEFFB00912763 /* scripts */,
+				5CDA0D0A122AD45A00912763 /* rejeweled.html */,
+				5CDA0CF4122AD45000912763 /* gameengineobj.js */,
+				5CDA0CF5122AD45000912763 /* gameviewer.html */,
+				5CDA0D00122AD45000912763 /* img */,
+			);
+			sourceTree = "<group>";
+		};
+		5CDA0D00122AD45000912763 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				5CDA0D01122AD45000912763 /* rj-jewel-black.gif */,
+				5CDA0D02122AD45000912763 /* rj-jewel-blue.gif */,
+				5CDA0D03122AD45000912763 /* rj-jewel-green.gif */,
+				5CDA0D04122AD45000912763 /* rj-jewel-purple.gif */,
+				5CDA0D05122AD45000912763 /* rj-jewel-red.gif */,
+				5CDA0D06122AD45000912763 /* rj-jewel-teal.gif */,
+				5CDA0D07122AD45000912763 /* rj-jewel-white.gif */,
+				5CDA0D08122AD45000912763 /* rj-jewel-yellow.gif */,
+				5CDA0D09122AD45000912763 /* static-red-pattern.gif */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		5CDA0D17122AEFFB00912763 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				5CDA0D18122AEFFB00912763 /* GE */,
+				5CDA0D23122AEFFB00912763 /* RJ */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+		5CDA0D18122AEFFB00912763 /* GE */ = {
+			isa = PBXGroup;
+			children = (
+				5CDA0D19122AEFFB00912763 /* GEBoard.js */,
+				5CDA0D1A122AEFFB00912763 /* GEDialog.js */,
+				5CDA0D1B122AEFFB00912763 /* GEObject.js */,
+				5CDA0D1C122AEFFB00912763 /* GEPiece.js */,
+				5CDA0D1D122AEFFB00912763 /* GEPieceBox.js */,
+				5CDA0D1E122AEFFB00912763 /* GERegion.js */,
+				5CDA0D1F122AEFFB00912763 /* GERulebook.js */,
+				5CDA0D20122AEFFB00912763 /* GEScoreboard.js */,
+				5CDA0D21122AEFFB00912763 /* GESound.js */,
+				5CDA0D22122AEFFB00912763 /* GEUtility.js */,
+			);
+			path = GE;
+			sourceTree = "<group>";
+		};
+		5CDA0D23122AEFFB00912763 /* RJ */ = {
+			isa = PBXGroup;
+			children = (
+				5CDA0D24122AEFFB00912763 /* RJBoard.js */,
+				5CDA0D25122AEFFB00912763 /* RJPiece.js */,
+				5CDA0D26122AEFFB00912763 /* RJPieceBox.js */,
+				5CDA0D27122AEFFB00912763 /* RJRegion.js */,
+				5CDA0D28122AEFFB00912763 /* RJRulebook.js */,
+				5CDA0D29122AEFFB00912763 /* RJScoreboard.js */,
+				5CDA0D2A122AEFFB00912763 /* RJSound.js */,
+			);
+			path = RJ;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		5CCCD061122AD419006C713A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 5CCCD064122AD419006C713A /* Build configuration list for PBXProject "Joshua" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 0;
+			mainGroup = 5CCCD05F122AD419006C713A;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		5CCCD062122AD419006C713A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		5CCCD063122AD419006C713A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5CCCD064122AD419006C713A /* Build configuration list for PBXProject "Joshua" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CCCD062122AD419006C713A /* Debug */,
+				5CCCD063122AD419006C713A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5CCCD061122AD419006C713A /* Project object */;
+}

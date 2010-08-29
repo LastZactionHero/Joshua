@@ -2,13 +2,13 @@
 	<head>
 		<title>Game Engine</title>
 
-		<script type="text/javascript" src="GEUtility.js"></script>
-		<script type="text/javascript" src="GEObject.js"></script>
-		<script type="text/javascript" src="GEPiece.js"></script>
-		<script type="text/javascript" src="GEPieceBox.js"></script>
-		<script type="text/javascript" src="GERegion.js"></script>
-		<script type="text/javascript" src="GEBoard.js"></script>
-		<script type="text/javascript" src="GERulebook.js"></script>
+		<script type="text/javascript" src="scripts/GE/GEUtility.js"></script>
+		<script type="text/javascript" src="scripts/GE/GEObject.js"></script>
+		<script type="text/javascript" src="scripts/GE/GEPiece.js"></script>
+		<script type="text/javascript" src="scripts/GE/GEPieceBox.js"></script>
+		<script type="text/javascript" src="scripts/GE/GERegion.js"></script>
+		<script type="text/javascript" src="scripts/GE/GEBoard.js"></script>
+		<script type="text/javascript" src="scripts/GE/GERulebook.js"></script>
 		
 		<script type="text/javascript">
 			//
@@ -21,7 +21,7 @@
 			// Startup Function
 			function startup()
 			{
-				gBoard.draw();
+				gBoard.draw_board();
 				gPieceBox.draw_pieces();
 			}
 			
@@ -33,7 +33,7 @@
 	</head>
 	
 	<body onload="javascript:startup()">
-		<div id="d_board" style="position:absolute;"></div>
+		<div id="d_board" style="position:fixed;"></div>
 		<div 
 			id="d_piece_layer" 
 			style="position:absolute; top:0px; left:0px; width:1000px; height:1000px;" 
