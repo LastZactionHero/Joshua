@@ -34,8 +34,8 @@ function get_div_html
 {	
 	var ret = "<div id=\"" + aID + "\" "
 				+ "style=\"position:absolute; "
-				+ "left:" + this.mRect.x + "px; "
-				+ "top:" + this.mRect.y + "px; "
+				+ "left:" + this.mRect.left + "px; "
+				+ "top:" + this.mRect.top + "px; "
 				+ "width:" + this.mRect.w + "px; "
 				+ "height:" + this.mRect.h + "px; "
 				+ "background:" + this.mBackgroundColor + "; "

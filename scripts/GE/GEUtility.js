@@ -9,7 +9,20 @@
  */
 function getWindowWidth()
 {
-	return window.innerWidth;
+	var width = 0;
+	
+	if( browser_detect() == "MSIE" )
+	{
+		if( document.body )
+		{
+			width = document.body.clientWidth;
+		}
+	}
+	else
+	{
+		width = window.innerWidth;
+	}
+	return Math.floor( width );
 }
 
 /**
@@ -18,7 +31,19 @@ function getWindowWidth()
  */
 function getWindowHeight()
 {
-	return window.innerHeight;
+	var height = 0;
+	if( browser_detect() == "MSIE" )
+	{
+		if( document.body )
+		{
+			height = document.body.clientHeight;
+		}
+	}
+	else
+	{
+		height = window.innerHeight;
+	}
+	return Math.floor( height );
 }
 
 /**
@@ -36,8 +61,8 @@ function coord
 	)
 {	
 	// Variables
-	this.x = aX;
-	this.y = aY;
+	this.left = aX;
+	this.top = aY;
 }
 
 coord.prototype.print = print_coord;
@@ -48,7 +73,7 @@ coord.prototype.print = print_coord;
  */
 function print_coord()
 {
-	return "(" + this.x + "," + this.y + ")";
+	return "(" + this.left + "," + this.top + ")";
 }
 
 /**
@@ -70,12 +95,25 @@ function rect
 	)
 {	
 	// Variables
-	this.x = aX;
-	this.y = aY;
+	this.left = aX;
+	this.top = aY;
 	this.w = aW;
 	this.h = aH;
 }
 rect.prototype.print = print_rect;
+rect.prototype.floor_rect = floor_rect;
+
+/**
+ * Rect floor function
+ *
+ */
+function floor_rect()
+{
+	this.left = Math.floor( this.left );
+	this.top = Math.floor( this.top );
+	this.w = Math.floor( this.w );
+	this.h = Math.floor( this.h );
+}
 
 /**
  * Print Formatted Rectangle Coordinates
@@ -83,7 +121,7 @@ rect.prototype.print = print_rect;
  */
 function print_rect()
 {
-	return "(" + this.x + "," + this.y + "," + this.w + "," + this.h + ")";
+	return "(" + this.left + "," + this.top + "," + this.w + "," + this.h + ")";
 }
 
 /**
@@ -96,10 +134,10 @@ function print_rect()
  */
 function is_coord_in_rect( aCoord, aRect )
 {
-	if( aCoord.x >= aRect.x &&
-		aCoord.y >= aRect.y &&
-		aCoord.x <= aRect.x + aRect.w &&
-		aCoord.y <= aRect.y + aRect.h )
+	if( aCoord.left >= aRect.left &&
+		aCoord.top >= aRect.top &&
+		aCoord.left <= aRect.left + aRect.w &&
+		aCoord.top <= aRect.top + aRect.h )
 	{
 		return true;
 	}
@@ -123,9 +161,9 @@ function browser_detect()
 	{
 		browser = "Chrome";
 	}
-	else if( navigator.userAgent.indexOf( "Internet Explorer" ) != -1 )
+	else if( navigator.userAgent.indexOf( "MSIE" ) != -1 )
 	{
-		browser = "Internet Explorer";
+		browser = "MSIE";
 	}
 	else if( navigator.userAgent.indexOf( "Safari" ) != -1 )
 	{

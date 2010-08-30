@@ -16,8 +16,8 @@ function RJScoreboard
 	
 	this.mRect = new rect
 		(
-		gBoard.mRect.x - gBoard.mBorderWidth + 2,
-		gBoard.mRect.y + gBoard.mRect.h + gBoard.mBorderWidth + 20,
+		gBoard.mRect.left - gBoard.mBorderWidth + 2,
+		gBoard.mRect.top + gBoard.mRect.h + gBoard.mBorderWidth + 20,
 		gBoard.mRect.w,
 		50		
 		)

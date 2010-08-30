@@ -45,7 +45,7 @@ function generate_region
 	aRect
 	)
 {
-	this.mRect = new rect( aRect.x, aRect.y, aRect.w, aRect.h );
+	this.mRect = new rect( aRect.left, aRect.top, aRect.w, aRect.h );
 	var ret = this.get_div_html( "", "" );
 	return ret;
 }
@@ -73,8 +73,8 @@ function cleanup_region()
 			// Horizontal Arrangement
 			case ArrangeType.ARRANGE_HORZ:	
 				newPieceCoords = new coord( 
-										   this.mRect.x + ( this.mRect.w - pieceWidth ) * ( i + 1 ) / ( pieceCount + 1 ) + gBoard.mBorderWidth,
-										   this.mRect.y + ( this.mRect.h - pieceHeight ) / 2 + gBoard.mBorderWidth
+										   this.mRect.left + ( this.mRect.w - pieceWidth ) * ( i + 1 ) / ( pieceCount + 1 ) + gBoard.mBorderWidth,
+										   this.mRect.top + ( this.mRect.h - pieceHeight ) / 2 + gBoard.mBorderWidth
 										   );
 				newPieceCoords = gBoard.local_to_global_coord( newPieceCoords );
 				break;
@@ -82,8 +82,8 @@ function cleanup_region()
 			// Dialog Arrangement
 			case ArrangeType.ARRANGE_DIAG:
 				newPieceCoords = new coord( 
-										   this.mRect.x + ( this.mRect.w - pieceWidth ) * ( i + 1 ) / ( pieceCount + 1 ),
-										   this.mRect.y + ( this.mRect.h - pieceHeight ) * ( i + 1 )/ ( pieceCount + 1 )
+										   this.mRect.left + ( this.mRect.w - pieceWidth ) * ( i + 1 ) / ( pieceCount + 1 ),
+										   this.mRect.top + ( this.mRect.h - pieceHeight ) * ( i + 1 )/ ( pieceCount + 1 )
 										   );
 				newPieceCoords = gBoard.local_to_global_coord( newPieceCoords );
 				break;
@@ -92,14 +92,14 @@ function cleanup_region()
 			case ArrangeType.ARRANGE_NONE:
 			default:
 				newPieceCoords = new coord( 
-										   pieceList[i].mRect.x,
-										   pieceList[i].mRect.y
+										   pieceList[i].mRect.left,
+										   pieceList[i].mRect.top
 										   );
 				break;
 		}
 
-		pieceList[i].mRect.x = newPieceCoords.x;
-		pieceList[i].mRect.y = newPieceCoords.y;
+		pieceList[i].mRect.left = newPieceCoords.left;
+		pieceList[i].mRect.top = newPieceCoords.top;
 		pieceList[i].move_piece();		
 	}	
 }

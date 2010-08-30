@@ -52,8 +52,8 @@ function generate_piece()
  */
 function move_piece()
 {
-	document.getElementById( this.get_piece_div() ).style.left = this.mRect.x + "px";
-	document.getElementById( this.get_piece_div() ).style.top = this.mRect.y + "px";
+	document.getElementById( this.get_piece_div() ).style.left = this.mRect.left + "px";
+	document.getElementById( this.get_piece_div() ).style.top = this.mRect.top + "px";
 	document.getElementById( this.get_piece_div() ).style.width = this.mRect.w + "px";
 	document.getElementById( this.get_piece_div() ).style.height = this.mRect.h + "px";
 }
@@ -68,8 +68,8 @@ function move_piece_to_coords
 	aCoord
 	)
 {
-	this.mRect.x = aCoord.x;
-	this.mRect.y = aCoord.y;
+	this.mRect.left = aCoord.left;
+	this.mRect.top = aCoord.top;
 	this.move_piece();
 }
 
@@ -88,12 +88,12 @@ function move_to_region
 
 	// Find coordinates in the center of the region
 	var regionCoords = new coord(
-								regionRect.x + regionRect.w / 2,
-								regionRect.y + regionRect.h / 2
+								regionRect.left + regionRect.w / 2,
+								regionRect.top + regionRect.h / 2
 								);
 	regionCoords = gBoard.local_to_global_coord( regionCoords );
-	this.mRect.x = regionCoords.x;
-	this.mRect.y = regionCoords.y;
+	this.mRect.left = regionCoords.left;
+	this.mRect.top = regionCoords.top;
 			
 	// Move game piece
 	this.move_piece();
@@ -125,8 +125,8 @@ function get_current_region()
  */
 function get_center_coord()
 {
-	var centerX = this.mRect.x + this.mRect.w / 2;
-	var centerY = this.mRect.y + this.mRect.h / 2;
+	var centerX = this.mRect.left + this.mRect.w / 2;
+	var centerY = this.mRect.top + this.mRect.h / 2;
 	
 	return new coord( centerX, centerY );
 }

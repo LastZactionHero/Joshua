@@ -33,6 +33,12 @@
 			gScoreboard = null;
 			gRulebook = null;
 			
+			// Startup Timeout
+			function startup_timeout()
+			{
+				setTimeout( "startup()", 1000 );
+			}
+			
 			// Startup Function
 			function startup()
 			{
@@ -50,18 +56,14 @@
 				gScoreboard.draw_scoreboard();
 			}
 			
-			function handle_mouse()
-			{
-				alert("mousething" );
-			}
 			</script>
 	</head>
 	
 	<body background="img/static-red-pattern.gif" onload="javascript:startup()">
-		<div id="d_board" style="position:fixed;"></div>
+		<div id="d_board" style="position:absolute;"></div>
 		<div 
 			id="d_piece_layer" 
-			style="position:fixed; top:0px; left:0px; width:1000px; height:1000px;" 
+			style="position:absolute; top:0px; left:0px; width:1000px; height:1000px;" 
 			onMouseMove="javascript:gPieceBox.handle_mouse_move(event)"
 			onMouseDown="javascript:gPieceBox.handle_mouse_down(event)"
 			onMouseUp="javascript:gPieceBox.handle_mouse_up(event)"

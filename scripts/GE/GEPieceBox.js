@@ -59,7 +59,7 @@ function get_piece_at_coord( aCoord )
 	for( var i = 0; i < this.mPieceList.length; i++ )
 	{
 		var currentPiece = this.mPieceList[i];
-		//alert( i + " " + aCoord.x + " " + aCoord.y + " " + this.mPieceList[i].mRect.print() );
+		//alert( i + " " + aCoord.left + " " + aCoord.top + " " + this.mPieceList[i].mRect.print() );
 		if( is_coord_in_rect( aCoord, currentPiece.mRect ) )
 		{
 			return currentPiece;
@@ -159,8 +159,8 @@ function handle_mouse_down(event)
 	if( this.mSelectedPiece )
 	{
 		this.mSelectedPieceStartCoord = new coord( 
-												  this.mSelectedPiece.mRect.x, 
-												  this.mSelectedPiece.mRect.y 
+												  this.mSelectedPiece.mRect.left, 
+												  this.mSelectedPiece.mRect.top 
 												  );
 	}
 }

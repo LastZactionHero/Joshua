@@ -282,7 +282,7 @@
 						<key>XCIncludePerspectivesSwitch</key>
 						<true/>
 						<key>XCSharingToken</key>
-						<string>com.apple.Xcode.GFSharingToken</string>
+						<string>com.apple.leftcode.GFSharingToken</string>
 					</dict>
 					<key>GeometryConfiguration</key>
 					<dict>
@@ -452,7 +452,7 @@
 						<key>XCIncludePerspectivesSwitch</key>
 						<integer>1</integer>
 						<key>XCSharingToken</key>
-						<string>com.apple.Xcode.GFSharingToken</string>
+						<string>com.apple.leftcode.GFSharingToken</string>
 					</dict>
 					<key>GeometryConfiguration</key>
 					<dict>
@@ -494,7 +494,7 @@
 	<key>ShelfIsVisible</key>
 	<false/>
 	<key>SourceDescription</key>
-	<string>file at '/Developer/Library/PrivateFrameworks/DevToolsInterface.framework/Resources/XCPerspectivesSpecificationMode1.xcperspec'</string>
+	<string>file at '/Developer/Library/PrivateFrameworks/DevToolsInterface.framework/Resources/XCPerspectivesSpecificationMode1.leftcperspec'</string>
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
@@ -515,7 +515,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/zachdicklin/Development/Joshua/Joshua.xcodeproj</string>
+		<string>/Users/zachdicklin/Development/Joshua/Joshua.leftcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>246 242 788 504 0 0 1280 778 </string>

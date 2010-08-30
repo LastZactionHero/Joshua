@@ -50,7 +50,10 @@ function play_sound_file
 	aIdx
 	)
 {
-	document.getElementById( this.get_audio_player_id( aIdx ) ).play();
+	if( document.getElementById( this.get_audio_player_id( aIdx ) ) )
+	{
+		document.getElementById( this.get_audio_player_id( aIdx ) ).play();
+	}
 }
 
 /**
