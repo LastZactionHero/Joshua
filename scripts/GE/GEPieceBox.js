@@ -96,6 +96,7 @@ function get_pieces_in_region( aRegionIdx )
  */
 function handle_mouse_move(event)
 {	
+	event = mouse_browser_convert( event );
 	if( this.mSelectedPiece )
 	{
 		// Get piece dimensions
@@ -122,11 +123,14 @@ function handle_mouse_up
 	event
 	)
 {	
+	event = mouse_browser_convert( event );
+	
 	// Bail if no piece selected
 	if( !this.mSelectedPiece )
 	{
 		return;
 	}
+
 	
 	// Validate move
 	if( !gRulebook.validate_board() )
@@ -149,6 +153,7 @@ function handle_mouse_up
 function handle_mouse_down(event)
 {
 	// Get mouse position
+	event = mouse_browser_convert( event );
 	var mouseCoord = new coord( event.clientX, event.clientY );
 	
 	// Determine selected piece

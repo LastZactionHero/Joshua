@@ -64,7 +64,7 @@ function handle_mouse_up
 	event
 	)
 {	
-
+	event = mouse_browser_convert( event );
 }
 
 /**
@@ -79,8 +79,9 @@ function handle_mouse_down(event)
 	if( !this.mClickable )
 		return;
 		
-	// Get mouse coordinates
-	var mouseCoord = new coord( event.clientX, event.clientY );
+	// Get mouse coordinates	
+	event = mouse_browser_convert( event );
+	mouseCoord = new coord( event.pageX, event.pageY );
 	
 	// Get piece at coordinates, bail if invalid
 	var selectedPiece = this.get_piece_at_coord( mouseCoord );
@@ -166,7 +167,7 @@ function handle_mouse_move
 	event
 	)
 {
-
+	event = mouse_browser_convert( event );
 }
 
 /** 

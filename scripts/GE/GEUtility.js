@@ -175,3 +175,26 @@ function browser_detect()
 	}
 	return browser;
 }
+
+/**
+ * Mouse Event Compatibility
+ *
+ * @param {event} aEvent Mouse event from browser
+ * @return {event} Mouse event converted for cross-browser compatibility
+ */
+function mouse_browser_convert
+	(
+	aEvent
+	)
+{
+	var ret = aEvent;
+
+	if( ret.pageX == null || ret.pageY == null )
+	{
+		var doc = document.documentElement, body = document.body;
+		ret.pageX = ret.clientX + (doc && doc.scrollLeft || body && body.scrollLeft || 0) - (doc && doc.clientLeft || body && body.clientLeft || 0);
+	  	ret.pageY = ret.clientY + (doc && doc.scrollTop  || body && body.scrollTop  || 0) - (doc   && doc.clientTop  || body && body.clientTop  || 0);
+	}
+		
+	return ret;
+}
